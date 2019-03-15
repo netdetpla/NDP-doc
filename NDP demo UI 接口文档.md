@@ -127,7 +127,7 @@
           "image-name": "scanservice",
           "tag": "1.2.1",
           "current-use": true,
-          "upload-time": "2019.03.01".
+          "upload-time": "2019.03.01",
           "size": "800MB",
           "test" {
           	"cpu": "0.5",
