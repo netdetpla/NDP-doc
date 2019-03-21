@@ -127,7 +127,7 @@
           "current-use": true,
           "upload-time": "2019.03.01",
           "size": "800MB",
-          "test" {
+          "test": {
           	"cpu": "0.5",
           	"memory": "512",
           	"bandwidth" "20"
