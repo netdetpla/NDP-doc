@@ -8,7 +8,7 @@
 
 - Method: **POST** 
 
-- URL: ```/image/upload/```
+- URL: ```/image/upload```
 
 - Body: 
 
@@ -16,9 +16,7 @@
   {
       "image-name": "scanservice",
       "tag": "1.2.3",
-      "test-task": {
-          "param": "1.1.1.1"
-      }
+      "test-param": "1.1.1.1",
   }
   ```
 
@@ -41,7 +39,7 @@
 
 - Method: **GET**
 
-- URL: ```/image/```
+- URL: ```/image```
 
 - Body: 
 
@@ -150,7 +148,7 @@
 
 - Method: **POST**
 
-- URL: ```/task/```
+- URL: ```/task```
 
 - Body
 
