@@ -89,11 +89,13 @@
       "data": [
           {
               "tag": "1.0.0",
-              "upload-time": "2018.09.01"
+              "upload-time": "2018.09.01",
+              "current-use": true
           },
           {
               "tag": "1.0.1",
-              "upload-time": "2019.01.01"
+              "upload-time": "2019.01.01",
+              "current-use": false
           }
       ]
   }
