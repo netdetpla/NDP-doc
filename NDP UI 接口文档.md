@@ -216,8 +216,162 @@
   }
   ```
 
+
+### 临时结果列表
+
+#### Request
+
++ Method: **GET**
+
++ URL: ```/result/{image_name}```
+
++ Body
+
+  ```
+  
+  ```
+#### Response
+
+  ```json
+{
+    "code": 200,
+    "message": "OK",
+    "data": [
+        {
+            "rid": 1,
+            "tid": 101
+        },
+        {
+            "rid": 2,
+            "tid": 102
+        }
+    ]
+}
+  ```
+
+### 临时结果详情
+
+#### Request
+
++ Method: **GET**
+
++ URL: ```/result/{image_name}/{rid}```
+
++ Body
+
+  ```
+  
+  ```
+
   
 
+#### Response
+
+```json
+{
+    "code": 200,
+    "message": "OK",
+    "data": [
+        ["ip", "118.67.200.10"],
+        ["hardware", "hardware"],
+        ["os_version", "DD-WRT v24-sp2 (Linux 2.4.37)"],
+        ["ports", "53, 80"]
+    ]
+}
+```
+
+## 统计分析
+
+### 统计图表
+
+#### Request
+
+- Method: **GET**
+
+- URL: `/statistic/charts`
+
+- Body
+
+  ```
+  
+  ```
+
+#### Response
+
+```json
+{
+  "code": 200,
+  "message": "OK",
+  "data": {
+    "port": {
+      "labels": ["80", "443", "22", "53", "8080"],
+      "data": [1054, 732, 261, 99, 8]
+    },
+    "service": {
+      "labels": ["http", "https", "ssh", "dns", "smtp"],
+      "data": [1102, 732, 261, 99, 2]
+    },
+    "hardware": {
+      "labels": ["general purpose", "router", "WAP", "hub", "others"],
+      "data": [1825, 447, 142, 85, 203]
+    },
+    "os": {
+      "labels": ["Linux", "Windows", "others"],
+      "data": [2133, 981, 362]
+    }
+  }
+}
+```
+
+### 搜索统计
+
+#### Request
+
+- Method: **POST**
+- URL: `/statistic/search`
+- Body:
+
+```json
+{
+    "type": "port",
+    "keyword": "80"
+}
+```
+
+#### Response
+
+```json
+{
+  "code": 200,
+  "message": "OK",
+    "data": [
+        {
+            title: "端口",
+            type: "bar",
+            labels: ["80", "443", "53", "21"],
+            data: [1022, 609, 331, 112]
+        },
+        {
+            title: "服务",
+            type: "bar",
+            labels: ["http", "dns", "snmp", "ssh"],
+            data: [1022, 609, 331, 112]
+        },
+        {
+            title: "操作系统",
+            type: "doughnut",
+            labels: ["Linux", "Windows", "other"],
+            data: [1022, 609, 331]
+        },
+        {
+            title: "硬件",
+            type: "doughnut",
+            labels: ["WAP", "router", "PC", "other"],
+            data: [1022, 609, 331, 112]
+        }
+    ]
+}
+```
 
 
-""
+
