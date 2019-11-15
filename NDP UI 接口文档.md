@@ -373,5 +373,30 @@
 }
 ```
 
+### 散点图数据
+
+#### Request
+
+- Method: **GET**
+- URL: `/statistic/map`
+- Body:
+
+```
+
+```
+
+#### Response
+
+```json
+{
+    "code": 200,
+    "message": "OK",
+    "data": [
+        {"lnglat": [116.405285, 39.904989], "level": 1},
+        {"lnglat": [117.190182, 39.125596], "level": 2}
+    ]
+}
+```
+
 
 
